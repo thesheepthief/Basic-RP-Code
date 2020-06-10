@@ -2,7 +2,7 @@
 
 --- No Drive Fast Drive by?
 
-local passengerDriveBy = true  --- Can Passanger Shoot?
+local passengerDriveBy = true  --- Can Passenger Shoot?
 
 
 Citizen.CreateThread(function()
@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 			
 		if vehicleClass ~= 15 and 16 then
 		GetEntitySpeed(GetPedInVehicleSeat(GetPlayerPed(-1), false)) 
-		-- If you want mph, then replace kmh with mph under here. If you want more or less than 30 also change it here
+		-- If you want kmh change below
 		if math.floor(speed*mph) > 40 then
 				SetPlayerCanDoDriveBy(PlayerId(), false)
 			elseif passengerDriveBy then
